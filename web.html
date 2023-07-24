@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Lumanosimo&display=swap" rel="stylesheet">
+        <style>
+            *{
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+            }
+
+            html{
+                scroll-behavior: smooth;
+            }
+            
+            body,
+            button,
+            input{
+                font-family: 'Lumanosimo', cursive;
+                font-size: var(--normal-font-size);
+            }
+
+            body{
+                background-color: var(--body-color);
+                font-size: var(--text-color);
+            }
+
+            h1, h2, h3{
+                color: var(--title-color);
+                font-weight: var(--font-bold);
+            }
+
+            p{
+                color: var(--title-color);
+            }
+
+            ul{
+                list-style: none;
+            }
+
+            a{
+                text-decoration: none;
+            }
+
+            img{
+                max-width: 100%;
+                height: auto;
+            }
+
+            /* VARIABLES CSS */
+            :root{
+                --header-height: 1.25rem;
+
+                /*colors*/
+            --first-color: hsl(79, 72%, 55%);
+            --first-color-light: hsl(79, 97%, 77%);
+            --first-color-alt: hsl(79, 67%, 52%);
+            --frist-color-dark: hsl(79, 63%, 50%);
+            --first-color-gray: hsl(79, 6%,64%);
+            --title-color: hsl(100, 4%, 98%);
+            --title-color-black: hsl(180, 4%,12%);
+            --text-color: hsl(180, 4%,72%);
+            --text-color-light: hsl(180, 4%, 65%);
+            --body-color: hsl(180, 12%,8%);
+
+            /*Font and Typography*/
+            --body-font: 'Red Hat Display', sans-serif;
+            --second-font: 'Kaushan Script', cursive;
+            --biggest-font-size: 2rem;
+            --bigger-font-size: 1.5rem;
+            --big-font-size: 1.25rem;
+            --h1-font-size: 1.5rem;
+            --h2-font-size: 1.25rem;
+            --h3-font-size: 1rem;
+            --normal-font-size: .938rem;
+            --small-font-size: .813rem;
+            --smaller-font-size: .75rem;
+
+            /*Font weight*/
+            --font-bold: 700;
+            --font-black: 900;
+
+            /*z index*/
+            --z-tooltip: 10;
+            --z-fixed: 100;
+            }
+
+            /* Responsive Typography */
+            @media screen and (min-width: 1024px) {
+                :root {
+                    --biggest-font-size: 6rem;
+                    --bigger-font-size: 3.5rem;
+                    --big-font-size: 2.75rem;
+                    --h1-font-size: 2.75rem;
+                    --h2-font-size: 1.5rem;
+                    --h3-font-size: 1.25rem;
+                    --normal-font-size: 1rem;
+                    --small-font-size: .875rem;
+                    --smaller-font-size: .813rem;
+                }
+                
+            }
+
+            .container{
+                max-width: 1124px;
+                margin-right: 1.5rem;
+                margin-left: 1.5rem;
+            }
+
+            .section{
+                padding: 4.5rem, 0, 2rem;
+            }
+
+            .section__data{
+                display: flex;
+                flex-direction: column;
+                row-gap: .75rem;
+                text-align: center;
+                margin-bottom: 3rem;
+            }
+
+            .section__title,
+            .section__title-border{
+                font-size: var(--big-font-size);
+                letter-spacing: 1.5px;
+            }
+
+            .section__subtitle{
+                font-size: var(--big-font-size);
+                font-family: var(--second-font);
+                font-weight: 400;
+                letter-spacing: 1.5px;
+                color: var(--first-color);
+                transform: rotate(-2deg);
+            }
+
+            .section__titles{
+                display: flex;
+                column-gap: .75rem;
+                justify-content: center;
+            }
+
+            .section__title-border{
+                -webkit-text-stroke: 1px var(--text-color);
+                color: transparent;
+            }
+
+            .grid{
+                display: grid;
+                gap: 1.5rem;
+            }
+
+            .main{
+                overflow: hidden; /* For animation ScrollReveal */
+            }
+
+            .program__container{
+                grid-template-columns: 225px;
+                justify-content: center;
+                row-gap: 2rem;
+                display: flex;
+                align-items: center;
+            }
+
+            .program__card{
+                display: grid;
+                background-color: hsla(79, 6%, 64%, .07);
+                padding: 1.5rem 2rem;
+                border: 2px solid transparent;
+                transition: background .5s, border .4s;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .program__img{
+                width: 38px;
+            }
+
+            .program__shape{
+                width: 50px;
+                height: 50px;
+                background-color: var(--first-color-gray);
+                border-radius: 50%;
+                display: grid;
+                place-items: center;
+                margin-bottom: 1rem;
+                transition: background .5s;
+            }
+
+            .program__title{
+                font-size: var(--h3-font-size);
+                margin-bottom: 1rem;
+            }
+
+            .program__description{
+                font-size: var(--small-font-size);
+                letter-spacing: .5px;
+                line-height: 150%;
+            }
+
+            .program__title,
+            .program__description{
+                transition: color .5s;
+            }
+
+            .program__button{
+                justify-self: flex-end;
+                margin-top: 1.5rem;
+                font-size: 1.25rem;
+                color: var(--title-color-black);
+                opacity: 0;
+                transition: opacity .4s;
+            }
+
+            .program__button i{
+                display: block;
+                transition: transform .3s;
+            }
+
+            .program__button:hover i{
+                transform: translateX(.25rem);
+            }
+
+            .program__card:hover{
+                background-color: var(--first-color);
+                border: 2px solid var(--first-color-light);
+            }
+
+            .program__card:hover .program__shape{
+                background-color: var(--first-color-light);
+            }
+
+            .program__card:hover .program__title,
+            .program__card:hover .program__description{
+                color: var(--title-color-black);
+            }
+
+            .program__card:hover .program__button{
+                opacity: 1;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <section class="program section" id="program">
+            <div class="container">
+                <div class="section__data">
+                    <h2 class="section__subtitle">Our Program</h2>
+                    <div class="section__titles">
+                        <h1 class="section__title-border">BUILD YOUR</h1>
+                        <h1 class="section__title">OWN SELF-ESTEEM></h1>
+                    </div>
+                </div>
+                <div class="program__container grid">
+                    <article class="program__card">
+                        <div class="program__shape">
+                            <div><i class="fa fa-search"></i></div>
+                            <img src="https://tse2.explicit.bing.net/th?id=OIP.yaNCwAyitc6GhNrbK4WzUQHaHa&pid=Api&P=0&h=180" alt="program image" class="program__img">
+                        </div>
+
+                        <h3 class="program__title">Communication</h3>
+
+                        <p class="program__description">
+                            The key to building a positive relationship
+                            and sorting out any communication difficulties
+                            with your teenager is to keep the channels of
+                            communication open...
+                        </p>
+
+                        <a href="#" class="program__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </article>
+                    <article class="program__card">
+                        <div class="program__shape">
+                            <img src="https://tse4.mm.bing.net/th?id=OIP.rhESQ1aZ_y5qcN0IHiruPQHaHd&pid=Api&P=0&h=180" alt="program image" class="program__img">
+                        </div>
+
+                        <h3 class="program__title">Education</h3>
+
+                        <p class="program__description">
+                            Talking about puberty isn't one-time conversation.
+                            Talk to your parents about the changes your body will
+                            go through as you grow...
+                        </p>
+
+                        <a href="#" class="program__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </article>
+                
+                    <article class="program__card">
+                        <div class="program__shape">
+                            <img src="https://tse1.mm.bing.net/th?id=OIP.KIo1YN2xoXlW5qPS3guZRQHaHa&pid=Api&P=0&h=180" alt="program image" class="program__img">
+                        </div>
+
+                        <h3 class="program__title">Doing what they love</h3>
+
+                        <p class="program__description">
+                            As long as what a teen is doing is not dangerous,
+                            a parent should find ways to support what a teens fell passionate
+                            about...
+                        </p>
+
+                        <a href="#" class="program__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </article>
+        
+        
+                    <article class="program__card">
+                        <div class="program__shape">
+                            <img src="https://tse1.mm.bing.net/th?id=OIP.mUbetc8Qduy3sDhgNbwIcQHaHa&pid=Api&P=0&h=180" alt="program image" class="program__img">
+                        </div>
+
+                        <h3 class="program__title">Good Posture</h3>
+
+                        <p class="program__description">
+                            standing tall not only helps improves how a teenager
+                            looks but it helps a tenn feel more secure and puts less stress on
+                            the back and shoulder...
+                        </p>
+
+                        <a href="#" class="program__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </article>
+                    
+                
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

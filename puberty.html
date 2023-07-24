@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Lumanosimo&display=swap" rel="stylesheet">
+        <style>
+
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                text-decoration: none;
+                border: none;
+                outline: none;
+                scroll-behavior: smooth;
+                font-family: 'Lumanosimo', cursive;
+            }
+
+            :root{
+                --bg-color: #fdfdfd;
+                --text-color: #333;
+                --main-color: #754ef9;
+                --white-color: #fdfdfd;
+                --shadow-color: rgba(0, 0, 0, .2);
+                --biggest-font-size: 6rem;
+                --bigger-font-size: 3.5rem;        
+            }
+
+           
+            
+        
+            .portfolio{
+                padding-bottom: 10rem;
+                font-size: 30px;
+                text-align: center;
+            
+             }
+            
+            .portfolio h2{
+                margin-bottom: 4rem;
+                
+            }
+
+            .portfolio .portfolio-container{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                align-items: center;
+                gap: 2.5rem;
+            }
+
+            .portfolio-container .portfolio-box{
+                position: relative;
+                display: flex;
+                border-radius: 2rem;
+                box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
+                overflow: hidden;
+            }
+
+            .portfolio-box img{
+                width: 100%;
+                transition: .5s ease;
+            }
+
+            .portfolio-box:hover img{
+                transform: scale(1.1);
+            }
+
+            .portfolio-box .portfolio-layer{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 85%;
+                background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
+                color: var(--white-color);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                text-align: center;
+                padding: 0 4rem;
+                opacity: 0;
+                transition: .5s ease;
+            }
+
+            .portfolio-box:hover .portfolio-layer{
+                opacity: 1;
+            }
+
+            .portfolio-layer h4{
+                font-size: 3rem;
+            }
+
+            .portfolio-layer p{
+                font-size: 1.6rem;
+                margin: .3rem 0 1rem;
+            }
+
+            .portfolio-layer a{
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                width: 5rem;
+                height: 5rem;
+                background: var(--white-color);
+                border-radius: 50%;
+            }
+            
+        </style>
+
+    </head>
+
+    <body>
+        <!--Portfolio sectio design-->
+        <section class="portfolio" id="portfolio">
+            <!-- <h2 class="heading">Latest <span>Project</span></h2> -->
+            <h2>Latest Project</h2>
+
+            <div class="portfolio-container">
+                <div class="portfolio-box">
+                    <img src="https://thumbs.dreamstime.com/b/boy-acne-problem-little-get-surprised-seeing-his-facial-mirror-52862115.jpg" alt="">
+
+                    <div class="portfolio-layer">
+                        <h4>MEN'S RAZOR</h4>
+                        <p>It help shave hard-to-reach and contoured areas of the body,
+                            armpits and the back of the knees...</p>
+                        <a href="#"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-box">
+                    <img src="https://thumbs.dreamstime.com/b/teen-boy-holding-razor-for-first-shave-vector-cartoon-187833378.jpg" alt="">
+
+                    <div class="portfolio-layer">
+                        <h4>MALE CONDOM</h4>
+                        <p>It is a barrier device that is used during sexual intercourse as a barrier contraceptive to reduce
+                            the probability of pregnancy or a Sexually transmitted infection...</p>
+                        <a href="#"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-box">
+                    <img src="https://media.istockphoto.com/vectors/puberty-vector-id681531468?k=6&m=681531468&s=170667a&w=0&h=FUSLWHSUhP-vCzjGTfo6_goR6QZFB5q8dqeqfxxUQqg=" alt="">
+
+                    <div class="portfolio-layer">
+                        <h4>DEODRANT</h4>
+                        <p>A substance applied to the body to prevent a mask body odor due to bacterial
+                            breakdown of perspiration. For example in the aempits, groin, or feet...
+                        </p>
+                        <a href="#"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-box">
+                    <img src="https://webstockreview.net/images/human-clipart-puberty-6.png" alt="">
+
+                    <div class="portfolio-layer">
+                        <h4>INTIMATE WASH</h4>
+                        <p>It resduces irritation and inflammation in the intimate area and keeps
+                            it protected. While choosing an intimate wash, make sure that it is mild,
+                            free from any harmful chemicals...
+                        </p>
+                        <a href="#"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-box">
+                    <img src="https://media.istockphoto.com/vectors/cartoon-razor-vector-id520545910?k=6&m=520545910&s=612x612&w=0&h=a4lZ2cUxay9D2B4DX9tDbLE2rykxyr8tp79k2WzOloQ=" alt="">
+
+                    <div class="portfolio-layer">
+                        <h4>WAX</h4>
+                        <p>Male body wax refers to all body areas from neck to toe except the
+                            genital and buttocks area. It is usually removed with strip wax which leaves
+                            a smooth result and exfoliates the top layer of dead skin cells...
+                        </p>
+                        <a href="#"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-box">
+                    <img src="https://clipartmag.com/images/puberty-cliparts-10.jpg" alt="">
+
+                    <div class="portfolio-layer">
+                        <h4>HAIR GROWTH OIL</h4>
+                        <p>The beard growth oil penetrates deep into the hair follicles on massaging
+                            and nourishes the roote to give your beard and moustache, a significant boost...
+                        </p>
+                        <a href="#"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+            </div>    
+        </section>
+    </body>
+</html>

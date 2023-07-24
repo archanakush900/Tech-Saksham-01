@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Teen Insights</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous" />
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Latest compiled and minified CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="img/fav.png" />
+
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css">
+
+    <!-- Latest compiled JavaScript -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  </head>
+
+  <body>
+    <!--***************** Navbar Start********************  -->
+    <nav class="navbar navbar-expand-lg" id="navmain">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <h3>Teen<span>Insights</span></h3>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#main_nav"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center"
+          id="main_nav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown" id="myDropdown">
+              <a class="nav-link dropdown-toggle" href data-bs-toggle="dropdown">Issues</a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href>Male &raquo;</a>
+                  <ul class="submenu dropdown-menu" id="subdropdown">
+                    <li><a class="dropdown-item"
+                        href="physical_changes_male.html">Physical
+                        Changes</a></li>
+                    <li><a class="dropdown-item"
+                        href="hormonal_changes_male.html">Hormonal
+                        Changes</a></li>
+                    <li><a class="dropdown-item"
+                        href="emotional_changes_male.html">Emotional
+                        Changes</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a class="dropdown-item" href>Female &raquo;</a>
+                  <ul class="submenu dropdown-menu" id="subdropdown">
+                    <li><a class="dropdown-item"
+                        href="physical_changes_female.html">Physical
+                        Changes</a></li>
+                    <li><a class="dropdown-item"
+                        href="hormonal_changes_female.html">Hormonal
+                        Changes</a></li>
+                    <li><a class="dropdown-item"
+                        href="emotional_changes_female.html">Emotional
+                        Changes</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="parents_care.html">Parents & Care</a>
+            </li>
+
+            <!-- Products dropdown -->
+            <li class="nav-item dropdown" id="myDropdown">
+              <a class="nav-link dropdown-toggle" href data-bs-toggle="dropdown">Products</a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="product_male.html">Male</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="product_female.html">Female</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="hygiene.html">Hygiene</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact_us.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="collapse navbar-collapse justify-content-center search"
+          id="main_nav">
+          <!-- Search Bar -->
+          <div class="container">
+            <form action="https://www.google.com/search" method="get"
+              class="search-bar">
+              <input type="text" placeholder="Search Your Problem" name="q">
+              <button type="submit"><img src="img/search.png">
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </nav>
+    <!--***************** Navbar End********************  -->
+
+    <!--***************** Header********************  -->
+
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-bs-target="myCarousel" data-bs-slide-to="0" class="active"></li>
+        <li data-bs-target="myCarousel" data-bs-slide-to="1"></li>
+        <li data-bs-target="myCarousel" data-bs-slide-to="2"></li>
+        <li data-bs-target="myCarousel" data-bs-slide-to="3"></li>
+      </ol>
+
+      <!-- Slides -->
+      <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="container-fluid" id="header">
+            <div class="row">
+              <div class="col">
+                <h2 class="text entrance-animation">To be beautiful, means to
+                  be </h2>
+                <h3 class="text-small ">Yourself</h3>
+                <p class="text entrance-animation">Embrace your uniqueness, for
+                  true beauty lies in authenticity. Let go of comparisons and
+                  societal standards; shine with confidence in your own skin. Be
+                  genuine, and you'll radiate a beauty that's unmatched and
+                  captivating.. </p>
+                <p class="text entrance-animation"></p>
+                <a href="parents_care.html">
+                  <button class="image-slide-in entrance-animation">Guidelines</button>
+                </a>
+              </div>
+              <div class="col" id="header-img">
+                <img src="img/4.png" alt="Slide 1 Image">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item" id="slide2">
+          <div class="container-fluid" id="header">
+            <div class="row">
+              <div class="col">
+
+                <h2 class="text entrance-animation">Always</h2>
+                <h3 class="text-small ">Smile</h3>
+                <p class="text entrance-animation">Always smile, for it's the
+                  simplest way to spread joy. A smile can brighten your day and
+                  touch hearts around you. Through challenges and triumphs, let
+                  your smile be a beacon of positivity, warming souls and
+                  creating a world filled with happiness.</p>
+                <a href="parents_care.html">
+                  <button class="image-slide-in entrance-animation">Guidelines</button>
+                </a>
+
+                <!-- <button>Button for Slide 2</button> -->
+              </div>
+              <div class="col" id="header-img">
+                <img src="img/slide2 (2).png" alt="Slide 2 Image">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item" id="slide3">
+          <div class="container-fluid" id="header">
+            <div class="row">
+              <div class="col">
+                <h2 class="text entrance-animation">Life dosen't come with a
+                  manual , It comes with a mother.</h2>
+                <h3 class="text-small ">Mother</h3>
+                <p class="text entrance-animation">A mother's love and guidance
+                  are the compass that navigates us through the journey of life.
+                  Her unconditional support and nurturing hands are the greatest
+                  gifts that shape us into who we are. Cherish the blessing of a
+                  mother's presence. </p>
+
+                <a href="parents_care.html">
+                  <button class="image-slide-in entrance-animation">Guidelines</button>
+                </a>
+              </div>
+              <div class="col" id="header-img">
+                <img src="img/slide3.png" alt="Slide 3 Image">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="carousel-item" id="slide4">
+          <div class="container-fluid" id="header">
+            <div class="row">
+              <div class="col">
+                <h2 class="text entrance-animation">Stop Doubting Yourself</h2>
+                <h3 class="text-small ">WorkHard</h3>
+                <p class="text entrance-animation">Believe in your abilities and
+                  the power within you. Embrace challenges as opportunities to
+                  grow. Persevere through obstacles, and success will follow.
+                  Trust your journey, for with determination and dedication, you'll
+                  achieve greatness beyond your imagination. </p>
+                <a href="parents_care.html">
+                  <button class="image-slide-in entrance-animation">Guidelines</button>
+                </a>
+              </div>
+              <div class="col" id="header-img">
+                <img src="img/slide4.png" alt="Slide 4 Image">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <a class="carousel-control-prev" href="#myCarousel" role="button"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#myCarousel" role="button"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </a>
+    </div>
+
+    <!--***************** Header End********************  -->
+
+    <!--***************** Image section start ********************  -->
+    <div class="container-fluid" id="homesec2">
+      <div class="box">
+        <div class="sec2img"><img src="img/anxiety.jpg"></div>
+        <div class="sec2head"> <h2><a href="anxiety.html">Anxiety Disorder</a></h2>
+        </div>
+      </div>
+      <div class="box">
+        <div class="sec2img"><img src="img/cig.jpg"></div>
+        <div class="sec2head"><h2><a href="vaping_smoking.html">Vaping or
+              Smoking</h2> </a></div>
+
+      </div>
+      <div class="box">
+        <div class="sec2img"> <img src="img/unwanted changes.jpg"></div>
+        <div class="sec2head"><h2> <a href="unwanted.html">Unwanted Changes</h2></a>
+        </div>
+
+      </div>
+      <div class="box">
+        <div class="sec2img"><img src="img/familysupport.jpg"></div>
+        <div class="sec2head"> <h2> <a href="familysupport.html">Family Support</h2></a>
+        </div>
+
+      </div>
+
+      <div class="box">
+        <div class="sec2img"><img src="img/boost girls confidence.jpg"></div>
+        <div class="sec2head"> <h2><a href="boost.html">Boost Girls' Confidence</h2></a>
+        </div>
+
+      </div>
+    </div>
+    <!--***************** Image section End ********************  -->
+
+    <!--***************** About section start ********************  -->
+    <div id="section1">
+      <div class="left about-content">
+        <h2>Welcome to Our World</h2>
+        <h3> Embrace the Teenage Spirit!</h3>
+        <p>
+          Welcome to our world, a thriving community specially crafted for
+          teenagers like you! We understand the excitement and challenges of
+          being a teenager, and that's why we're here to offer you a space to
+          connect, learn, and grow.
+          <br><br>
+          In our community, you'll find like-minded individuals who share your
+          interests and passions. Whether you're a high school student,
+          college-goer, or somewhere in between, there's a place for you here.
+          <br><br>
+          Our mission is to provide a safe and inclusive environment where you
+          can freely express yourself, engage in discussions that matter, and
+          make lasting friendships. From inspiring blog posts to fun-filled
+          events, there's always something happening to keep you engaged.
+
+          Discover new opportunities, get valuable advice, and embrace the
+          teenage spirit with us! Join our community today and embark on a
+          journey of self-discovery and camaraderie. Together, we'll make
+          teenage years the best years of our lives!
+        </p>
+      </div>
+      <div class="right about-image">
+        <img src="img/first-removebg-preview.png" alt srcset>
+      </div>
+
+    </div>
+
+    <!--***************** About Section End ********************  -->
+
+    <!--***************** Our Program ********************  -->
+    <section class="program section" id="program">
+      <div class="container">
+        <div class="section__data">
+          <h2 class="section__subtitle">Our Program</h2>
+          <div class="section__titles">
+            <h1 class="section__title-border">BUILD YOUR</h1>
+            <h1 class="section__title">OWN SELF-ESTEEM</h1>
+          </div>
+        </div>
+        <div class="program__container grid">
+          <article class="program__card">
+            <div class="program__shape">
+              <img
+                src="https://tse2.explicit.bing.net/th?id=OIP.yaNCwAyitc6GhNrbK4WzUQHaHa&pid=Api&P=0&h=180"
+                alt="program image" class="program__img">
+            </div>
+
+            <h3 class="program__title">Communication</h3>
+
+            <p class="program__description">
+              The key to building a positive relationship
+              and sorting out any communication difficulties
+              with your teenager is to keep the channels of
+              communication open...
+            </p>
+
+            <a href="#" class="program__button">
+              <i class="ri-arrow-right-line"></i>
+            </a>
+          </article>
+          <article class="program__card">
+            <div class="program__shape">
+              <img
+                src="https://tse4.mm.bing.net/th?id=OIP.rhESQ1aZ_y5qcN0IHiruPQHaHd&pid=Api&P=0&h=180"
+                alt="program image" class="program__img">
+            </div>
+
+            <h3 class="program__title">Education</h3>
+
+            <p class="program__description">
+              Talking about puberty isn't one-time conversation.
+              Talk to your parents about the changes your body will
+              go through as you grow...
+            </p>
+
+            <a href="#" class="program__button">
+              <i class="ri-arrow-right-line"></i>
+            </a>
+          </article>
+
+          <article class="program__card">
+            <div class="program__shape">
+              <img
+                src="https://tse1.mm.bing.net/th?id=OIP.KIo1YN2xoXlW5qPS3guZRQHaHa&pid=Api&P=0&h=180"
+                alt="program image" class="program__img">
+            </div>
+
+            <h3 class="program__title">Give Freedom</h3>
+
+            <p class="program__description">
+              As long as what a teen is doing is not dangerous,
+              a parent should find ways to support what a teens fell passionate
+              about...
+            </p>
+            <a href="#" class="program__button">
+              <i class="ri-arrow-right-line"></i>
+            </a>
+          </article>
+
+          <article class="program__card">
+            <div class="program__shape">
+              <img
+                src="https://tse1.mm.bing.net/th?id=OIP.mUbetc8Qduy3sDhgNbwIcQHaHa&pid=Api&P=0&h=180"
+                alt="program image" class="program__img">
+            </div>
+
+            <h3 class="program__title">Good Posture</h3>
+
+            <p class="program__description">
+              Standing tall not only helps improves how a teenager
+              looks but it helps a tenn feel more secure and puts less stress on
+              the back and shoulder...
+            </p>
+
+            <a href="#" class="program__button">
+              <i class="ri-arrow-right-line"></i>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!--***************** Our Program End********************  -->
+
+    <!--***************** About Teenagers Insights Start ********************  -->
+    <div class="hero">
+      <div class="title">
+        <h1>Fun Fact</h1>
+
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="counter-box">
+            <i class="fa-solid fa-users"></i> <br>
+
+            <h2 class="counter">100</h2><span>+</span>
+            <h4>VISITORS</h4>
+
+          </div>
+        </div>
+        <div class="col">
+          <div class="counter-box">
+            <i class="fa-solid fa-star-of-life"></i> <br>
+            <h2 class="counter">100</h2><span></span>
+            <h4>ADDITIONAL RESOURCES</h4>
+
+          </div>
+        </div>
+        <div class="col">
+          <div class="counter-box">
+            <i class="fa-solid fa-heart"></i> <br>
+            <h2 class="counter">100</h2><span>+</span>
+            <h4>LIKES</h4>
+
+          </div>
+        </div>
+        <div class="col">
+          <div class="counter-box">
+            <i class="fa-solid fa-face-smile-beam"></i> <br>
+            <h2 class="counter">100</h2> <span>+</span>
+            <h4>HAPPY CLIENTS</h4>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--***************** About Teenagers Insights  End********************  -->
+
+    <!--***************** Testimonials Start********************  -->
+    <section id="testimonials">
+      <h2 class="testimonial-title" style="font-family: cursive;">what do people
+        say about menstrupedia.</h2>
+      <div class="testimonial-container container">
+        <div class="testimonial-box">
+          <div class="star-rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </div>
+          <p class="testimonial-text">Menstruation is a small price you pay for
+            being blessed with the grandest gift you
+            can ever wish for, and that is the privilege to give birth.</p>
+          <div class="customer-detail">
+            <div class="cus-photo"><img
+                src="https://images.unsplash.com/photo-1572460418264-695212ed493a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dGVlbmFnZSUyMGdpcmxzfGVufDB8fDB8fHww&w=1000&q=80"
+                alt></div>
+            <p class="cus-name">Sneha Mishra</p>
+          </div>
+        </div>
+        <div class="testimonial-box">
+          <div class="star-rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </div>
+          <p class="testimonial-text">Menstruation is just a way for your body
+            to let go of something that is no longer
+            needed.</p>
+          <div class="customer-detail">
+            <div class="cus-photo"><img
+                src="https://media.istockphoto.com/id/1410738422/photo/portrait-of-young-smile-handsome-black-african-american-man-on-gray-wall-background-happy.webp?b=1&s=170667a&w=0&k=20&c=9bG8S7zYtKsoRl52YdE4-wW6KvBAPnsKXQNS4f2UTAc="
+                alt></div>
+            <p class="cus-name">Saif</p>
+          </div>
+        </div>
+        <div class="testimonial-box">
+          <div class="star-rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </div>
+          <p class="testimonial-text">Ofcourse we need to educate children about
+            periods. </p>
+          <div class="customer-detail">
+            <div class="cus-photo"><img
+                src="data:image/jpeg;base64,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"
+                alt></div>
+            <p class="cus-name">Rashmi Sinha</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--***************** Testimonials End ********************  -->
+
+    <!--***************** Impactful Youtube Video Start********************  -->
+
+    <div class="heading">
+      <h1>Impactful MHM Program with Menstrupedia</h1> <br><br>
+
+      <iframe width="400" height="315"
+        src="https://www.youtube.com/embed/ap9alKv2dMg"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        style="border: 2px red solid;" allowfullscreen></iframe>
+
+      <iframe width="400" height="315"
+        src="https://www.youtube.com/embed/AYt2umr3mLc"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        style="border: 2px red solid;" allowfullscreen></iframe> <br>
+
+      <iframe width="400" height="315"
+        src="https://www.youtube.com/embed/QiqWmLBXoz8"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        style="border: 2px red solid;" allowfullscreen></iframe>
+
+      <iframe width="400" height="315"
+        src="https://www.youtube.com/embed/qUNTtn1WPEw"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        style="border: 2px red solid;" allowfullscreen></iframe> <br>
+
+      <iframe width="400" height="315"
+        src="https://www.youtube.com/embed/fLgc_27ymOc"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        style="border: 2px red solid;" allowfullscreen></iframe>
+
+      <iframe width="400" height="315"
+        src="https://www.youtube.com/embed/4SRXvGHKA-k"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        style="border: 2px red solid;" allowfullscreen></iframe>
+    </div>
+
+    <!--***************** Impactful Youtube Video End ********************  -->
+
+    <!--***************** Footer********************  -->
+
+    <footer class="footer-distributed">
+
+      <div class="footer-left">
+
+        <h3>Teen<span>Insights</span></h3>
+
+        <p class="footer-links">
+          <a href="#" class="link-1">Home</a>
+
+          <a href="#">About</a>
+
+          <a href="#">Issues</a>
+
+          <a href="#">Help</a>
+
+          <a href="#">Contact</a>
+        </p>
+
+        <p class="footer-company-name">Copyright © 2017 All Rights Reserved </p>
+      </div>
+
+      <div class="footer-center">
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:riyasanjeevyadav2511@gmail.com">Vanshika Yadav</a></p>
+        </div>
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:ritikamishra8081@gmail.com">Ritika Mishra</a></p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:support@company.com">support@company.com</a></p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:support@company.com">support@company.com</a></p>
+        </div>
+
+      </div>
+
+      <div class="footer-right">
+
+        <p class="footer-company-about">
+          <span>About the website</span>
+          Uncover crucial insights on physical changes and health for all."
+        </p>
+
+        <div class="footer-icons">
+
+          <a href="https://m.facebook.com/profile.php?id=100038260553420"><i
+              class="fa-brands fa-facebook"></i></a>
+          <a href="https://twitter.com/teenagersfact_1"><i
+              class="fa-brands fa-twitter"></i></a>
+          <a href="https://instagram.com/tean_guide?igshid=NTc4MTIwNjQ2YQ=="><i
+              class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-github"></i></a>
+
+        </div>
+
+      </div>
+
+    </footer>
+
+    <!--***************** Footer End********************  -->
+
+  </body>
+
+</html>

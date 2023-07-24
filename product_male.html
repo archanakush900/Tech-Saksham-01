@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Teenager Insights</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous" />
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Latest compiled and minified CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="img/fav.png" />
+
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css">
+
+    <!-- Latest compiled JavaScript -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+      
+      :root{
+                --bg-color: #fdfdfd;
+                --text-color: #333;
+                --main-color: #754ef9;
+                --white-color: #fdfdfd;
+                --shadow-color: rgba(0, 0, 0, .2);
+                --biggest-font-size: 6rem;
+                --bigger-font-size: 3.5rem;        
+            }
+
+            html{
+                font-size: 62.5%;
+                overflow-x: hidden;
+            }
+
+            body{
+                background: var(--bg-color);
+                color: var(--text-color);
+            }
+
+            .heading{
+                font-size: var(--big-font-size);
+                font-family: 'Lumanosimo', cursive;
+                font-weight: 400;
+                letter-spacing: 1.5px;
+                color: var(--first-color);
+                transform: rotate(-2deg);
+            }
+            
+            .portfolio{
+                padding-bottom: 10rem;
+                font-size: 30px;
+                text-align: center;
+            
+             }
+            
+            .portfolio h2{
+                margin-bottom: 4rem;
+                
+            }
+
+            .portfolio .portfolio-container{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                align-items: center;
+                gap: 2.5rem;
+            }
+
+            .portfolio-container .portfolio-box{
+                position: relative;
+                display: flex;
+                border-radius: 2rem;
+                box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
+                overflow: hidden;
+            }
+
+            .portfolio-box img{
+                width: 100%;
+                transition: .5s ease;
+            }
+
+            .portfolio-box:hover img{
+                transform: scale(1.1);
+            }
+
+            .portfolio-box .portfolio-layer{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 85%;
+                background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
+                color: var(--white-color);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                text-align: center;
+                padding: 0 4rem;
+                opacity: 0;
+                transition: .5s ease;
+            }
+
+            .portfolio-box:hover .portfolio-layer{
+                opacity: 1;
+            }
+
+            .portfolio-layer h4{
+                font-size: 3rem;
+            }
+
+            .portfolio-layer p{
+                font-size: 1.6rem;
+                margin: .3rem 0 1rem;
+            }
+
+            .portfolio-layer a{
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                width: 5rem;
+                height: 5rem;
+                background: var(--white-color);
+                border-radius: 50%;
+            }
+            
+        
+    </style>
+  </head>
+
+  <body>
+    <!--***************** Navbar Start********************  -->
+    <nav class="navbar navbar-expand-lg" id="navmain">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <h3>Teen<span>Insights</span></h3>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#main_nav"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center"
+          id="main_nav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown" id="myDropdown">
+              <a class="nav-link dropdown-toggle" href
+                data-bs-toggle="dropdown">Issues</a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href>Male &raquo;</a>
+                  <ul class="submenu dropdown-menu" id="subdropdown">
+                    <li><a class="dropdown-item"
+                        href="physical_changes_male.html">Physical
+                        Changes</a></li>
+                    <li><a class="dropdown-item "
+                        href="hormonal_changes_male.html">Hormonal
+                        Changes</a></li>
+                    <li><a class="dropdown-item"
+                        href="emotional_changes_male.html">Emotional
+                        Changes</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Female &raquo;</a>
+                  <ul class="submenu dropdown-menu" id="subdropdown">
+                    <li><a class="dropdown-item"
+                        href="physical_changes_female.html">Physical
+                        Changes</a></li>
+                    <li><a class="dropdown-item"
+                        href="hormonal_changes_female.html">Hormonal
+                        Changes</a></li>
+                    <li><a class="dropdown-item"
+                        href="emotional_changes_female.html">Emotional
+                        Changes</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="parents_care.html">Parents & Care</a>
+            </li>
+
+            <!-- Products dropdown -->
+            <li class="nav-item dropdown active" id="myDropdown">
+              <a class="nav-link dropdown-toggle active" href
+                data-bs-toggle="dropdown">Products</a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item active" href="product_male.html">Male</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="product_female.html">Female</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="hygiene.html">Hygiene</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact_us">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="collapse navbar-collapse justify-content-center search"
+          id="main_nav">
+          <!-- Search Bar -->
+          <div class="container">
+            <form action="https://www.google.com/search" method="get"
+              class="search-bar">
+              <input type="text" placeholder="Search Your Problem" name="q">
+              <button type="submit"><img src="img/search.png">
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </nav>
+    <!--***************** Navbar End********************  -->
+
+    <!--***************** Main Content********************  -->
+    <div id="headerbg">
+      <img src="img/malebg.png" alt>
+    </div>
+
+    <!--Portfolio sectio design-->
+    <section class="portfolio" id="portfolio">
+      <!-- <h2 class="heading">Latest <span>Project</span></h2> -->
+      <h2>Latest Project</h2>
+
+      <div class="portfolio-container">
+        <div class="portfolio-box">
+          <img
+            src="https://thumbs.dreamstime.com/b/boy-acne-problem-little-get-surprised-seeing-his-facial-mirror-52862115.jpg"
+            alt>
+
+          <div class="portfolio-layer">
+            <h4>MEN'S RAZOR</h4>
+            <p>It help shave hard-to-reach and contoured areas of the body,
+              armpits and the back of the knees...</p>
+            <a href="#"><i class='bx bx-link-external'></i></a>
+          </div>
+        </div>
+        <div class="portfolio-box">
+          <img
+            src="https://thumbs.dreamstime.com/b/teen-boy-holding-razor-for-first-shave-vector-cartoon-187833378.jpg"
+            alt>
+
+          <div class="portfolio-layer">
+            <h4>MALE CONDOM</h4>
+            <p>It is a barrier device that is used during sexual intercourse as
+              a barrier contraceptive to reduce
+              the probability of pregnancy or a Sexually transmitted
+              infection...</p>
+            <a href="#"><i class='bx bx-link-external'></i></a>
+          </div>
+        </div>
+        <div class="portfolio-box">
+          <img
+            src="https://media.istockphoto.com/vectors/puberty-vector-id681531468?k=6&m=681531468&s=170667a&w=0&h=FUSLWHSUhP-vCzjGTfo6_goR6QZFB5q8dqeqfxxUQqg="
+            alt>
+
+          <div class="portfolio-layer">
+            <h4>DEODRANT</h4>
+            <p>A substance applied to the body to prevent a mask body odor due
+              to bacterial
+              breakdown of perspiration. For example in the aempits, groin, or
+              feet...
+            </p>
+            <a href="#"><i class='bx bx-link-external'></i></a>
+          </div>
+        </div>
+        <div class="portfolio-box">
+          <img
+            src="https://webstockreview.net/images/human-clipart-puberty-6.png"
+            alt>
+
+          <div class="portfolio-layer">
+            <h4>INTIMATE WASH</h4>
+            <p>It resduces irritation and inflammation in the intimate area and
+              keeps
+              it protected. While choosing an intimate wash, make sure that it
+              is mild,
+              free from any harmful chemicals...
+            </p>
+            <a href="#"><i class='bx bx-link-external'></i></a>
+          </div>
+        </div>
+        <div class="portfolio-box">
+          <img
+            src="https://media.istockphoto.com/vectors/cartoon-razor-vector-id520545910?k=6&m=520545910&s=612x612&w=0&h=a4lZ2cUxay9D2B4DX9tDbLE2rykxyr8tp79k2WzOloQ="
+            alt>
+
+          <div class="portfolio-layer">
+            <h4>WAX</h4>
+            <p>Male body wax refers to all body areas from neck to toe except
+              the
+              genital and buttocks area. It is usually removed with strip wax
+              which leaves
+              a smooth result and exfoliates the top layer of dead skin cells...
+            </p>
+            <a href="#"><i class='bx bx-link-external'></i></a>
+          </div>
+        </div>
+        <div class="portfolio-box">
+          <img src="https://clipartmag.com/images/puberty-cliparts-10.jpg" alt>
+
+          <div class="portfolio-layer">
+            <h4>HAIR GROWTH OIL</h4>
+            <p>The beard growth oil penetrates deep into the hair follicles on
+              massaging
+              and nourishes the roote to give your beard and moustache, a
+              significant boost...
+            </p>
+            <a href="#"><i class='bx bx-link-external'></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--***************** Main Content End********************  -->
+
+    <!--***************** Footer********************  -->
+
+    <footer class="footer-distributed">
+
+      <div class="footer-left">
+
+        <h3>Teenagers<span>Fact</span></h3>
+
+        <p class="footer-links">
+          <a href="#" class="link-1">Home</a>
+
+          <a href="#">About</a>
+
+          <a href="#">Issues</a>
+
+          <a href="#">Help</a>
+
+          <a href="#">Contact</a>
+        </p>
+
+        <p class="footer-company-name">Copyright © 2017 All Rights Reserved </p>
+      </div>
+
+      <div class="footer-center">
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:riyasanjeevyadav2511@gmail.com">Vanshika Yadav</a></p>
+        </div>
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:ritikamishra8081@gmail.com">Ritika Mishra</a></p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:support@company.com">support@company.com</a></p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:support@company.com">support@company.com</a></p>
+        </div>
+
+      </div>
+
+      <div class="footer-right">
+
+        <p class="footer-company-about">
+          <span>About the website</span>
+          Uncover crucial insights on physical changes and health for all."</p>
+
+        <div class="footer-icons">
+
+          <a href="https://m.facebook.com/profile.php?id=100038260553420"><i
+              class="fa-brands fa-facebook"></i></a>
+          <a href="https://twitter.com/teenagersfact_1"><i
+              class="fa-brands fa-twitter"></i></a>
+          <a href="https://instagram.com/tean_guide?igshid=NTc4MTIwNjQ2YQ=="><i
+              class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-github"></i></a>
+
+        </div>
+
+      </div>
+
+    </footer>
+
+    <!--***************** Footer End********************  -->
+
+  </body>
+</html>
